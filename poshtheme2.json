@@ -118,7 +118,7 @@
           "foreground_templates": [
             "{{ if .Error }}p:terminal-red{{ end }}"
           ],
-          "template": "\uf00d exit {{ .String }} "
+          "template": "{{ if .Error }}\uf00d exit {{ .String }} {{ end }}"
         }
       ]
     },
