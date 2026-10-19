@@ -56,7 +56,7 @@
     {
       "type": "prompt",
       "alignment": "right",
-      "overflow": "hide",
+      "overflow": "break",
       "segments": [
         {
           "type": "node",
@@ -100,18 +100,11 @@
           "powerline_symbol": "\ue0b0",
           "template": " \ue795 {{ .Name }} ",
           "foreground": "p:light-sky-blue"
-        }
-      ]
-    },
-    {
-      "type": "prompt",
-      "alignment": "left",
-      "newline": true,
-      "segments": [
+        },
         {
           "type": "executiontime",
           "style": "plain",
-          "template": "\uf252 {{ .FormattedMs }} ",
+          "template": " \uf252 {{ .FormattedMs }} ",
           "foreground": "p:terminal-magenta",
           "properties": {
             "always_enabled": true,
@@ -129,7 +122,14 @@
           "properties": {
             "always_enabled": true
           }
-        },
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
         {
           "type": "root",
           "style": "plain",
